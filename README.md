@@ -118,13 +118,19 @@ Sebelum melakukan pelatihan model, Dataset akan displit sebesar 70% untuk data l
 
 Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
 - Random Forest
-  - Merupakan ensemble model dari decision tree dengan voting classifier
+  - Merupakan ensemble model dari decision tree dengan bagging algorithm
   - Waktu latih lebih cepat
 
 - Gradient Boosting
   - Merupakan ensemble model dari decision tree dengan boosting algorithm
   - Sering mendapatkan hasil lebih baik dari random forest
   - Lebih sensitif terhadap overfitting
+
+Kedua model tersebut sangat bagus terutama untuk menangani kasus dimana dataset tidak seimbang.
+
+Cara kerja Random Forest yaitu dengan melakukan ensemble dari setiap Decision Tree yang dibangun. Setiap Decision Tree akan diberikan random sample dari data latih untuk dapat melakukan klasifikasi. Setiap pembuatan Decision Tree, algoritma ID3 atau CART akan membagi dataset berdasarkan fitur - fitur yang ada dan meningkatkan homogenitas dari setiap bagian dataset. Dalam kasus ini, 200 fitur akan diacak dan disebarkan ke Decision Tree yang dibuat untuk belajar dalam melakukan klasifikasi. Setelah seluruh Decision Tree tersebut belajar dan dapat melakukan klasifikasi, Decision Tree tersebut akan menghasilkan prediksinya masing - masing. Setelah itu dilakukan aggregasi dari prediksi - prediksi tersebut untuk menghasilkan satu prediksi yang pasti (Bagging Algorithm).
+
+Sementara untuk Gradient Boosting, model ini juga menerapkan metode ensemble dari setiap Decision Tree. Perbedaannya pada proses ensemblenya. Gradient Boosting menerapkan metode boosting yaitu memperbaiki / meningkatkan performa dari Decision Tree sebelumnya. Proses pembuatan Decision Tree pada Gradient Boosting sama dengan Random Forest. Gradient Boosting akan menunggu Decision Tree pertama untuk selesai belajar sebelum Decision Tree yang kedua mulai belajar. Hal ini yang membuat Gradient Boosting sering kali memakan waktu yang lebih lama dari Random Forest.
 
 Random Forest dan Gradient Boosting menggunakan library `sklearn`. 
 
@@ -148,7 +154,7 @@ RandomForestClassifier(
 ```
 
 Parameter untuk Gradient Boosting dalam kasus ini
-```
+```py
 GradientBoostingClassifier(
     loss='log_loss',
     criterion='friedman_mse', 
