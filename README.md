@@ -118,13 +118,13 @@ Sebelum melakukan pelatihan model, Dataset akan displit sebesar 70% untuk data l
 
 Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
 1. Random Forest
- - Merupakan ensemble model dari decision tree dengan voting classifier
- - Waktu latih lebih cepat
+  - Merupakan ensemble model dari decision tree dengan voting classifier
+  - Waktu latih lebih cepat
 
 2. Gradient Boosting
- - Merupakan ensemble model dari decision tree dengan boosting algorithm
- - Sering mendapatkan hasil lebih baik dari random forest
- - Lebih sensitif terhadap overfitting
+  - Merupakan ensemble model dari decision tree dengan boosting algorithm
+  - Sering mendapatkan hasil lebih baik dari random forest
+  - Lebih sensitif terhadap overfitting
 
 ## Evaluasi
 
