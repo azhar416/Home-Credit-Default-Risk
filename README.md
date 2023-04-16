@@ -128,8 +128,15 @@ Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
 
 Random Forest dan Gradient Boosting menggunakan library `sklearn`. 
 
-Parameter untuk Random Forest dalam kasus ini
+Pertama mendeklarasikan variabel untuk model
+
+```py
+random_forest = RandomForestClassifier(**parameter)
+gradient_boosting = GradientBoostingClassifier(**parameter)
 ```
+
+Parameter untuk Random Forest dalam kasus ini
+```py
 RandomForestClassifier(
     bootstrap=False, 
     criterion='entropy', 
@@ -150,6 +157,15 @@ GradientBoostingClassifier(
     random_state=42
 )
 ```
+
+Setelah itu melakukan pelatihan dengan `model.fit`
+
+```py
+random_forest.fit(X_train, y_train)
+gradient_boosting.fit(X_train, y_train)
+```
+
+Setelah melakukan pelatihan, model siap untuk melakukan prediksi sesuai dengan fitur yang digunakan.
 
 ## Evaluasi
 
