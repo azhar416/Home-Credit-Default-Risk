@@ -80,13 +80,41 @@ Berikut merupakan persebaran data terhadap lama kerja pemohon
 
 ### Bureau
 
+Beberapa insight yang didapat pada data bureau
+
+![BUREAU1](./Img/bureau1.png)
+
+Banyak dari pemohon yang kreditnya sudah lunas dan juga cukup banyak pemohon dengan kredit yang masih aktif dengan tipe kredit yang paling banyak yaitu comsumer credit yaitu sebagai member dari Home Credit.
+
 ### Previous Application
+
+Beberapa insight yang didapat
+
+![PREVAPP1](./Img/prevapp.png)
 
 ### POS Cash Balance
 
+![POS](./Img/pos.png)
+
 ## Data Preparation
 
+Pada data preparation, keempat data tersebut akan digabungkan menjadi satu.
+
+Sebelum itu, harus dilakukan pengecekan baik missing value, outlier, maupun anomali.
+
+Pada data application train, terdapat beberapa anomali seperti lamanya bekerja mencapai 1000 tahun. Hal ini diatasi dengan merubah nilai tersebut menjadi rata - rata dari lama berkerja.
+
+Selain melakukan drop, pembersihan data juga dilakukan dengan melakukan imputing baik dengan mean maupun modus.
+
+Setelah melakukan pembersihan data, maka dilakukan Feature Engineering untuk menambahkan fitur yang diduga dapat meningkatkan performa dari model.
+
+Feature Engineering ini dilakukan pada application train dengan menambahkan fitur baik dari hasil proses data pada tabel tersebut maupun hasil proses dari data tabel yang lain.
+
+Hasil dari Data Preparation ini adalah sebuah dataset baru dengan 179.793 data dan 200 buah fitur.
+
 ## Modeling
+
+Sebelum melakukan pelatihan model, Dataset akan displit sebesar 70% untuk data latih dan 30% untuk data test. Saat melakukan splitting, digunakan Stratify karena `TARGET` yang imbalance.
 
 Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
 1. Random Forest
