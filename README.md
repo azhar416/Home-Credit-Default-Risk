@@ -126,6 +126,31 @@ Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
   - Sering mendapatkan hasil lebih baik dari random forest
   - Lebih sensitif terhadap overfitting
 
+Random Forest dan Gradient Boosting menggunakan library `sklearn`. 
+
+Parameter untuk Random Forest dalam kasus ini
+```
+RandomForestClassifier(
+    bootstrap=False, 
+    criterion='entropy', 
+    max_depth=16,
+    n_estimators=200, 
+    n_jobs=-1, 
+    random_state=42
+)
+```
+
+Parameter untuk Gradient Boosting dalam kasus ini
+```
+GradientBoostingClassifier(
+    loss='log_loss',
+    criterion='friedman_mse', 
+    max_depth=16,
+    n_estimators=200, 
+    random_state=42
+)
+```
+
 ## Evaluasi
 
 Metric yang digunakan untuk evaluasi model adalah ***ROC AUC***.
