@@ -117,11 +117,11 @@ Hasil dari Data Preparation ini adalah sebuah dataset baru dengan 179.793 data d
 Sebelum melakukan pelatihan model, Dataset akan displit sebesar 70% untuk data latih dan 30% untuk data test. Saat melakukan splitting, digunakan Stratify karena `TARGET` yang imbalance.
 
 Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
-1. Random Forest
+- Random Forest
   - Merupakan ensemble model dari decision tree dengan voting classifier
   - Waktu latih lebih cepat
 
-2. Gradient Boosting
+- Gradient Boosting
   - Merupakan ensemble model dari decision tree dengan boosting algorithm
   - Sering mendapatkan hasil lebih baik dari random forest
   - Lebih sensitif terhadap overfitting
