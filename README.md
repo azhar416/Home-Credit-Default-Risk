@@ -128,3 +128,33 @@ Beberapa model yang dapat digunakan untuk permasalahan ini yaitu:
 
 ## Evaluasi
 
+Metric yang digunakan untuk evaluasi model adalah ***ROC AUC***.
+
+ROC AUC merupakan metric evaluasi yang cocok untuk dataset yang imbalance karena metric ini mengukur kemampuan model dalam membedakan target 0 dan 1, tidak akan terpengaruh dengan perbandingan jumlah sempel pada masing - masing target. Metric ini juga menunjukkan seberapa baik model dalam membedakan target pada tingkat threshold yang berbeda.
+
+Mencari treshold terbaik juga merupakan salah satu cara untuk memperoleh perfoma terbaik dari model.
+
+Disamping ROC AUC, recall juga digunakan untuk mengevaluasi model karena akan lebih baik jika memprediksi pemohon untuk gagal bayar (target 1) meskipun faktanya tidak (target 0) dari pada memprediksi pemohon tidak akan gagal bayar (target 0) tetapi faktanya pemohon tersebut gagal bayar (target 1).
+
+Karena recall yang diutamakan, maka akurasi, presisi, dan F1 score akan dikesampingkan meskipun tetap digunakan.
+
+Hasil dari Evaluasi Model :
+- Random Forest
+ - ROC AUC Score : 0.7586
+ - Recall : 0.7586
+ - Akurasi : 0.8119
+ - Presisi : 0.6691
+ - F1 Score : 0.5014
+
+![RF_EVAL](./Img/rf_eval.png)
+
+- Gradient Boosting
+ - ROC AUC Score : 0.7450
+ - Recall : 0.7450
+ - Akurasi : 0.8009
+ - Presisi : 0.6574
+ - F1 Score : 0.4808
+
+![GB_EVAL](./Img/gb_eval.png)
+
+Dilihat dari hasil evaluasi, Performa Random Forest lebih baik dari Gradient Boosting dalam kasus ini. Sehingga disarankan menggunakan Model Random Forest.
