@@ -25,20 +25,20 @@ Dataset dapat diunduh pada tautan : [Home Credit Default Risk](https://www.kaggl
 Pada dataset tersebut tidak gunakan seluruhnya. Dataset yang digunakan antara lain : 
 
 - application_{train|test}.csv
- - merupakan tabel utama, terpisah menjadi file Train (terdapat TARGET) dan Test (tidak terdapat TARGET).
- - Static data untuk semua pemohon. Satu baris merepresentasikan satu peminjaman.
+  - merupakan tabel utama, terpisah menjadi file Train (terdapat TARGET) dan Test (tidak terdapat TARGET).
+  - Static data untuk semua pemohon. Satu baris merepresentasikan satu peminjaman.
 
 - bureau.csv
- - Seluruh credit yang pernah dilakukan klien pada institusi finansial lain yang dilaporkan ke biro kredit.
- - Untuk setiap peminjaman terdapat banyak baris tergantung jumlah kredit sebelumnya sebelum waktu peminjaman.
+  - Seluruh credit yang pernah dilakukan klien pada institusi finansial lain yang dilaporkan ke biro kredit.
+  - Untuk setiap peminjaman terdapat banyak baris tergantung jumlah kredit sebelumnya sebelum waktu peminjaman.
 
 - previous_application.csv
- - seluruh permohonan yang pernah dilakukan sebelumnya pada Home Credit.
- - Terdapat satu baris untuk setiap permohonan sebelumnya terkait peminjaman saat ini.
+  - seluruh permohonan yang pernah dilakukan sebelumnya pada Home Credit.
+  - Terdapat satu baris untuk setiap permohonan sebelumnya terkait peminjaman saat ini.
 
 - POS_CASH_balance.csv
- - saldo bulanan dari POS (point of sales) sebelumnya dan cash loan yang pemohon miliki pada Home Credit.
- - Memiliki satu baris untuk setiap bulan dari credit yang pernah dilakukan pada Home Credit.
+  - saldo bulanan dari POS (point of sales) sebelumnya dan cash loan yang pemohon miliki pada Home Credit.
+  - Memiliki satu baris untuk setiap bulan dari credit yang pernah dilakukan pada Home Credit.
 
 ### Application Train
 
@@ -187,20 +187,20 @@ Karena recall yang diutamakan, maka akurasi, presisi, dan F1 score akan dikesamp
 
 Hasil dari Evaluasi Model :
 - Random Forest
- - ROC AUC Score : 0.7586
- - Recall : 0.7586
- - Akurasi : 0.8119
- - Presisi : 0.6691
- - F1 Score : 0.5014
+  - ROC AUC Score : 0.7586
+  - Recall : 0.7586
+  - Akurasi : 0.8119
+  - Presisi : 0.6691
+  - F1 Score : 0.5014
 
 ![RF_EVAL](./Img/rf_eval.png)
 
 - Gradient Boosting
- - ROC AUC Score : 0.7450
- - Recall : 0.7450
- - Akurasi : 0.8009
- - Presisi : 0.6574
- - F1 Score : 0.4808
+  - ROC AUC Score : 0.7450
+  - Recall : 0.7450
+  - Akurasi : 0.8009
+  - Presisi : 0.6574
+  - F1 Score : 0.4808
 
 ![GB_EVAL](./Img/gb_eval.png)
 
